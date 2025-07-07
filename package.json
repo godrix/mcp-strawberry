@@ -1,0 +1,49 @@
+{
+  "name": "mcp-strawberry",
+  "version": "1.0.0",
+  "main": "./dist/server.js",
+  "bin": {
+    "mcp-strawberry": "./dist/server.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "npm run build && export DANGEROUSLY_OMIT_AUTH=true && npx @modelcontextprotocol/inspector node /build/server.js "
+  },
+  "keywords": [
+    "modelcontextprotocol",
+    "mcp",
+    "strawberry",
+    "counter",
+    "letter",
+    "model-context-protocol",
+    "llm",
+    "ai",
+    "r-counting",
+    "humor",
+    "irony",
+    "niche-tool",
+    "essential-for-llms",
+    "rhotic-rescue"
+  ],
+  "author": "Carlos Gabriel Godri, Godrix (https://godri.dev)",
+  "description": "The crucial MCP tool that finally teaches LLMs how to count 'R's in words like 'strawberry'. Because apparently, they can't do it themselves. Seriously.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/godrix/mcp-strawberry.git"
+  },
+  "files": [
+    "dist/",  
+    "LICENSE", 
+    "README.md"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3"
+  }
+}
