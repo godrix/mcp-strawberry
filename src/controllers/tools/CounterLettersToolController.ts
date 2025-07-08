@@ -11,10 +11,11 @@ export class CounterLettersToolController {
   }
 
   private registerTools(): void {
-    this.registerGetUuidToolhandler();
+    this.registerCounterLettersToolhandler();
+    this.registerCounterRLettersToolhandler();
   }
 
-  private registerGetUuidToolhandler(): void {
+  private registerCounterLettersToolhandler(): void {
     this.server.tool(
       "counter-letters",
       "Counts the number of letters in a given word.",
@@ -30,6 +31,35 @@ export class CounterLettersToolController {
       },
       ({ word }) => {
         let data = this.counterLetterInWordService.counterLetters(word);
+
+        return {
+          content: [
+            {
+              type: "text",
+              text: data,
+            },
+          ],
+        };
+      }
+    );
+  }
+
+  private registerCounterRLettersToolhandler(): void {
+    this.server.tool(
+      "counter-letters",
+      "Counts the number of letters 'R' in a given word.",
+      {
+        word: z
+          .string()
+          .min(1, "The word cannot be empty.")
+          .refine(
+            (word) => !word.includes(" "),
+            "Must contain only one word and no spaces."
+          )
+          .describe("Word to count the letters"),
+      },
+      ({ word }) => {
+        let data = this.counterLetterInWordService.counterRLetters(word);
 
         return {
           content: [
