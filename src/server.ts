@@ -7,7 +7,7 @@ import { CounterLettersToolController } from "./controllers/tools/CounterLetters
 async function main() {
   const server = new McpServer({
     name: "mcp-strawberry",
-    version: "1.0.3",
+    version: "1.1.0",
   });
 
   // Services

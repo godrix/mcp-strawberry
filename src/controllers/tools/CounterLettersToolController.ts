@@ -46,7 +46,7 @@ export class CounterLettersToolController {
 
   private registerCounterRLettersToolhandler(): void {
     this.server.tool(
-      "counter-letters",
+      "counter-r-letters",
       "Counts the number of letters 'R' in a given word.",
       {
         word: z
