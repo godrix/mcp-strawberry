@@ -3,12 +3,11 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { CounterLetterInWordService } from "./services/CounterLetterInWordService";
 import { CounterLettersToolController } from "./controllers/tools/CounterLettersToolController";
-import "dotenv/config";
 
 async function main() {
   const server = new McpServer({
     name: "mcp-strawberry",
-    version: "1.0.1",
+    version: "1.0.2",
   });
 
   // Services
